@@ -1,23 +1,17 @@
 import {StyleSheet} from 'react-native';
 
 const style = StyleSheet.create({
-  landingContainer: {
+  signUpContainer: {
     flex: 1,
     alignItems: 'center',
     paddingTop: 10,
     backgroundColor: '#0047AB',
   },
-  landingTitle: {
+  signUpTitle: {
     fontSize: 24,
     marginBottom: 400,
     color: '#FAF9F6',
     paddingTop: 50,
-  },
-  landingButtonContainer: {
-    flex: 1,
-    flexDirection: 'row',
-    minWidth: '80%',
-    justifyContent: 'space-evenly',
   },
   button: {
     backgroundColor: 'black',

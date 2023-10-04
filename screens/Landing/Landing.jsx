@@ -1,27 +1,24 @@
 import React, {useState} from 'react';
-import {View, Text, TouchableOpacity} from 'react-native';
+import {View, Text} from 'react-native';
 import style from './Landing.style';
 import Button from '../../components/Button';
 
-const Landing = navigation => {
-  const [log, setLog] = useState(false);
-  const handleAgent = () => {
-    navigation.navigate('agentHome');
+const Landing = ({navigation}) => {
+  const handleLogin = () => {
+    navigation.navigate('login');
   };
 
-  const handleClient = () => {
-    setLog(true);
+  const handleSignUp = () => {
+    navigation.navigate('signUp');
   };
 
   return (
-    <View style={style.container}>
-      <Text>Landing Page</Text>
-      <Button name="Agent" onPress={handleAgent} />
-      <Button name="Client" onPress={handleClient} />
-      <TouchableOpacity onPress={handleClient}>
-        <Text>hogan</Text>
-      </TouchableOpacity>
-      {log ? <Text>Howdy</Text> : <Text>Nothing</Text>}
+    <View style={style.landingContainer}>
+      <Text style={style.landingTitle}>Landing Page Picture</Text>
+      <View style={style.landingButtonContainer}>
+        <Button styles={style} name="Login" handleButton={handleLogin} />
+        <Button styles={style} name="Sign-up" handleButton={handleSignUp} />
+      </View>
     </View>
   );
 };
